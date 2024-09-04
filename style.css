@@ -1,0 +1,770 @@
+html {
+  scroll-behavior: smooth;
+}
+
+body {
+  margin: 0;
+  overflow-x: hidden;
+}
+
+nav {
+  height: 5rem;
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  justify-content: space-between;
+  background-color: #34353a;
+  position: sticky;
+  top: 0;
+  width: 100%;
+  z-index: 1000;
+}
+
+.nav-image-container {
+  align-items: flex-start;
+  margin-left: 1rem;
+  flex-basis: 33.33%;
+  flex-grow: 1;
+  flex-shrink: 1;
+}
+
+.nav-logo {
+  height: 3rem;
+  width: auto;
+}
+
+.nav-items-container {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  gap: 5rem;
+  /* flex: 1;
+  margin-right: 5rem; */
+  flex-basis: 33.33%;
+  flex-grow: 1;
+  flex-shrink: 1;
+}
+
+.nav-items-container a {
+  transition: all 0.3s ease;
+}
+
+.nav-items-container a:hover {
+  color: #ff656c;
+}
+
+.nav-right {
+  flex-basis: 33.33%;
+  flex-grow: 1;
+  flex-shrink: 1;
+}
+
+.nav-items-container a {
+  font-family: "ABeeZee", sans-serif;
+  font-weight: 400;
+  font-style: normal;
+  text-decoration: none;
+  color: white;
+  font-size: 1.2rem;
+}
+
+.homepage {
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+  align-items: center;
+  background-color: #34353a;
+}
+
+.homepage-left {
+  flex-basis: 15%;
+  flex-grow: 1;
+  flex-shrink: 1;
+}
+
+.homepage-text {
+  display: flex;
+  justify-content: center;
+  align-items: flex-start;
+  flex-direction: column;
+  color: white;
+  flex-basis: 37.5%;
+  flex-grow: 1;
+  flex-shrink: 1;
+  margin-bottom: 10rem;
+}
+
+.Download-button {
+  display: flex;
+  align-items: center;
+  font-family: "ABeeZee", sans-serif;
+  font-weight: 500;
+  font-size: 17px;
+  padding: 12px 20px;
+  color: white;
+  background: #ff656c;
+  border: none;
+  box-shadow: 0 0.7em 1.5em -0.5em rgba(59, 48, 78, 0.527);
+  letter-spacing: 0.05em;
+  border-radius: 8px;
+  cursor: pointer;
+  position: relative;
+  margin-top: 2rem;
+}
+
+.Download-button svg {
+  margin-right: 8px;
+  width: 25px;
+}
+
+.Download-button:hover {
+  box-shadow: 0 0.5em 1.5em -0.5em rgba(88, 71, 116, 0.627);
+}
+
+.Download-button:active {
+  box-shadow: 0 0.3em 1em -0.5em rgba(88, 71, 116, 0.627);
+}
+
+.Download-button::before {
+  content: "";
+  width: 4px;
+  height: 40%;
+  background-color: white;
+  position: absolute;
+  border-top-right-radius: 5px;
+  border-bottom-right-radius: 5px;
+  left: 0;
+  transition: all 0.2s;
+}
+
+.Download-button::after {
+  content: "";
+  width: 4px;
+  height: 40%;
+  background-color: white;
+  position: absolute;
+  border-top-left-radius: 5px;
+  border-bottom-left-radius: 5px;
+  right: 0;
+  transition: all 0.2s;
+}
+
+.Download-button:hover::before,
+.Download-button:hover::after {
+  height: 60%;
+}
+
+.homepage-first-text {
+  font-family: "Inter", sans-serif;
+  font-size: 2.5rem;
+  margin: 0;
+}
+
+.homepage-first-text, .homepage-second-text {
+  border-right: 5px solid;
+  width: 85%;
+  white-space: nowrap;
+  overflow: hidden;
+  animation: typing 2s, cursor 0.4s step-end infinite alternate;
+}
+
+@keyframes cursor {
+  50% {
+    border-color: transparent;
+  }
+}
+
+@keyframes typing {
+  from {
+    width: 0;
+  }
+}
+
+.homepage-second-text {
+  font-family: "ABeeZee", sans-serif;
+  font-size: 2rem;
+  margin: 0;
+}
+
+.homepage-name {
+  font-family: "IBM Plex Sans Devanagari", sans-serif;
+  color: #ff656c;
+  font-size: 4rem;
+}
+
+.homepage-image {
+  place-self: flex-end;
+  display: flex;
+  justify-content: flex-end;
+  align-items: center;
+  flex-basis: 37.5%;
+  flex-grow: 1;
+  flex-shrink: 1;
+}
+
+.homepage-image img {
+  height: 53.5rem;
+}
+
+.homepage-socials {
+  flex-basis: 10%;
+  flex-grow: 1;
+  flex-shrink: 1;
+  place-self: flex-end;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: flex-start;
+  gap: 2rem;
+  margin-bottom: 5rem;
+}
+
+.homepage-socials i {
+  font-size: 3.5rem;
+  color: white;
+  transition: all 0.3s ease;
+}
+
+.homepage-socials i:hover {
+  color: #ff656c;
+}
+
+.homepage-line {
+  height: 10rem;
+  border-left: 3px solid #ff656c;
+  margin-left: 1.5rem;
+}
+
+/* ABOUT PAGE ------------------------------------------------------------------------------------------------------------------ */
+
+/* ABOUT ------------------------------------------------------------------------------------------------------------------ */
+.aboutpage {
+  background-color: #31333b;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-direction: column;
+}
+
+.about {
+  color: white;
+  margin: 0 15rem 0 15rem;
+}
+
+.about-text-container {
+  display: flex;
+  flex-direction: row;
+  gap: 1rem;
+}
+
+.about-text-container-right {
+  flex-basis: 92%;
+  flex-shrink: 1;
+  flex-grow: 1;
+}
+
+.about-text-container-left {
+  flex-basis: 8%;
+  flex-shrink: 1;
+  flex-grow: 1;
+  border-top: 3px solid #ff656c;
+  margin-top: 1rem;
+}
+
+.about h1 {
+  font-family: "IBM Plex Sans Devanagari", sans-serif;
+  font-size: 4rem;
+  margin: 5rem 0 0 0;
+}
+
+.about p {
+  font-family: "ABeeZee", sans-serif;
+  font-size: 1.7rem;
+  text-align: justify;
+  margin: 0;
+}
+
+/* MY SKILLS ------------------------------------------------------------------------------------------------------------------ */
+
+.skills {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-direction: column;
+}
+
+.skills h1 {
+  margin: 8rem 0 4rem 0;
+  font-family: "IBM Plex Serif", sans-serif;
+  color: white;
+  font-size: 4rem;
+}
+
+.card-container {
+  display: flex;
+  flex-direction: row;
+  gap: 8rem;
+}
+
+.skill-card {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-direction: column;
+  gap: 1rem;
+  width: 15rem;
+  height: 15rem;
+  font-family: "IBM Plex Serif", sans-serif;
+  box-shadow: 0 8px 14px 0 rgba(0, 0, 0, 0.2);
+  background: #3d3e42;
+  color: white;
+  /* border: 1px solid white; */
+  border-radius: 1rem;
+}
+
+.title {
+  font-size: 1.5em;
+  font-weight: 900;
+  text-align: center;
+  margin: 0;
+}
+
+.marquee {
+  background-color: #31333b;
+  color: white;
+  position: relative;
+  width: 100vw;
+  max-width: 100%;
+  height: 18rem;
+  overflow-x: hidden;
+}
+
+.track {
+  position: absolute;
+  white-space: nowrap;
+  will-change: transform;
+  animation: marquee 32s linear infinite;
+}
+
+@keyframes marquee {
+  from {
+    transform: translateX(0);
+  }
+  to {
+    transform: translateX(-50%);
+  }
+}
+
+/* PORTFOLIO ------------------------------------------------------------------------------------------------------------------ */
+
+.portfolio {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-direction: column;
+  margin: 0 0 5rem 0;
+}
+
+.portfolio h1 {
+  margin: 8rem 0 4rem 0;
+  font-family: "IBM Plex Serif", sans-serif;
+  color: white;
+  font-size: 4rem;
+}
+
+.portfolio-container {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  /* flex-direction: column; */
+  gap: 5rem;
+}
+
+.portfolio-grid {
+  display: grid;
+  grid-template-columns: repeat(2, 1fr);
+  grid-gap: 5rem;
+}
+
+.portfolio-card {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-direction: column;
+  background-color: #3d3e42;
+  height: 27rem;
+  width: 40rem;
+  border-radius: 15px;
+  overflow: hidden;
+}
+
+.portfolio-card-text {
+  display: flex;
+  align-items: flex-start;
+  justify-content: center;
+  flex-direction: row;
+  width: 90%;
+}
+
+.portfolio-card-text-left {
+  flex: 1;
+  flex-shrink: 1;
+  flex-grow: 1;
+}
+
+.portfolio-card-text-right i {
+  font-size: 3rem;
+  color: white;
+  transition: all 0.3s ease;
+}
+
+.portfolio-card-text-right i:hover {
+  color: #ff656c;
+}
+
+.portfolio-card-text h2 {
+  color: white;
+  font-family: "IBM Plex Sans Devanagari", sans-serif;
+  margin: 0 0 1rem 0;
+}
+
+.portfolio-card-text p {
+  color: white;
+  font-family: "ABeeZee", sans-serif;
+  margin: 0 0 1rem 0;
+}
+
+.portfolio-card-image {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.portfolio-card img {
+  width: 90%;
+  height: auto;
+  border-radius: 5px;
+}
+
+/* EXPERIENCE ------------------------------------------------------------------------------------------------------------------ */
+
+.experience {
+  background-color: #3d3e42;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-direction: column;
+  padding-bottom: 5rem;
+}
+
+.experience-title {
+  display: flex;
+  place-self: flex-start;
+  margin: 0 15rem 0 15rem;
+}
+
+.experience h1 {
+  font-family: "IBM Plex Serif", sans-serif;
+  color: white;
+  font-size: 4rem;
+  margin: 3rem 0 3rem 0;
+}
+
+.experience-container {
+  margin: 0 30rem 0 30rem;
+  padding: 0 0 0 2rem;
+  border-left: 3px solid #ff656c;
+  display: flex;
+  justify-content: center;
+  align-items: flex-start;
+  flex-direction: column;
+}
+
+.experience-container h2 {
+  font-family: "IBM Plex Sans Devanagari", sans-serif;
+  color: white;
+  font-size: 3rem;
+  margin: 0;
+}
+
+.experience-container h3 {
+  font-family: "IBM Plex Sans Devanagari", sans-serif;
+  color: white;
+  font-size: 2rem;
+  margin: 0;
+}
+
+.experience-container p {
+  font-family: "ABeeZee", sans-serif;
+  color: white;
+  font-size: 1rem;
+  text-align: justify;
+}
+
+.experience-container img {
+  width: 100%;
+  height: auto;
+}
+
+/* FOOTER ------------------------------------------------------------------------------------------------------------------ */
+
+footer {
+  background-color: #31333b;
+  display: flex;
+  justify-content: space-evenly;
+  align-items: center;
+  padding: 2rem;
+}
+
+.left-container h1 {
+  font-family: "IBM Plex Sans Devanagari", sans-serif;
+  color: white;
+  font-size: 3rem;
+  margin: 0 0 1rem 0;
+}
+
+.socials {
+  display: flex;
+  gap: 3rem;
+}
+
+.socials i {
+  font-size: 2rem;
+  color: black;
+  padding: 1rem;
+  background-color: white;
+  border-radius: 50%;
+  transition: all 0.3s ease;
+}
+
+.socials i:hover {
+  background-color: #ff656c;
+}
+
+.right-container {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+.contacts {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-direction: row;
+  gap: 2rem;
+}
+
+.contact-info {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-direction: column;
+  height: 10rem;
+  width: 15rem;
+  background-color: #3d3e42;
+  border-radius: 10px;
+  gap: 1rem;
+}
+
+.contact-info p {
+  font-family: "ABeeZee", sans-serif;
+  font-size: 1rem;
+  color: white;
+}
+
+.loader {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100vw;
+  height: 100vh;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  background-color: #31333b;
+  transition: opacity 4s, visibility 4s;
+  z-index: 1000;
+}
+
+.loader-hidden {
+  opacity: 0;
+  visibility: hidden;
+}
+
+.loader::after {
+  content: "";
+  width: 75px;
+  height: 75px;
+  border: 15px solid #3d3e42;
+  border-top-color: #ff656c;
+  border-radius: 50%;
+  animation: loading 0.75s ease infinite;
+}
+
+@keyframes loading {
+  from {
+    transform: rotate(0turn);
+  }
+  to {
+    transform: rotate(1turn);
+  }
+}
+
+/* RESPONSIVE HERE ------------------------------------- */
+
+@media only screen and (max-width: 480px) {
+  body {
+    overflow-x: hidden;
+  }
+  
+  nav {
+    height: 5rem;
+  }
+
+  .nav-logo {
+    height: 2rem;
+  }
+
+  .nav-items-container {
+    gap: 2rem;
+  }
+
+  .nav-items-container a {
+    font-size: 1rem;
+  }
+
+  .homepage {
+    display: flex;
+    flex-direction: column;
+    width: 100%;
+  }
+
+  .homepage-text {
+    margin: 6rem 0 6rem 0;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    width: 75%;
+  }
+
+  .homepage-image {
+    place-self: center;
+  }
+
+  .homepage-image img{
+    height: 30rem;
+  }
+
+  .homepage-first-text {
+    font-size: 1.5rem;
+    text-align: center;
+  }
+
+  .homepage-name {
+    font-size: 2rem;
+  }
+
+  .homepage-second-text {
+    font-size: 1.2rem;
+    text-align: center;
+  }
+
+  .Download-button {
+    font-size: 10px;
+  }
+
+  .homepage-socials {
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    justify-content: center;
+    place-self: center;
+    margin: 2rem 0 2rem 0;
+    
+  }
+
+  .homepage-line {
+    margin-left: 0;
+    height: 5rem;
+  }
+
+  .about {
+    margin: 0 4rem 0 4rem;
+  }
+
+  .about p {
+    font-size: 1.2rem;
+  }
+
+  .about-text-container {
+    width: 100%;
+  }
+
+  .skills h1 {
+    margin: 5rem 0 4rem 0;
+  }
+
+  .portfolio h1 {
+    margin: 4rem 0 4rem 0;
+  }
+
+  .portfolio-grid {
+    display: grid;
+    grid-template-columns: repeat(1, 1fr);
+    grid-gap: 5rem;
+  }
+
+  .portfolio-card {
+    height: 17rem;
+    width: 20rem;
+  }
+
+  .experience {
+    width: 100%;
+  }
+
+  .experience h1 {
+    font-size: 3.5rem;
+  }
+
+  .experience-title {
+    place-self: center;
+  }
+
+  .experience-container {
+    margin: 0;
+  }
+
+  .experience-container h2 {
+    font-size: 2.5rem;
+  }
+
+  .experience-container h3 {
+    font-size: 1.5rem;
+  }
+
+  .experience-container img {
+    width: 20rem;
+    height: auto;
+  }
+
+  .experience-container p {
+    width: 20rem;
+  }
+
+  footer {
+    display: flex;
+    flex-direction: column;
+    gap: 2rem;
+  }
+
+  .contact-info {
+    width: 10rem;
+    margin-bottom: 3rem;
+  }
+
+  .contact-info p {
+    font-size: 0.7rem;
+  }
+}
